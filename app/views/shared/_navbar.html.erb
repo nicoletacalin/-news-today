@@ -1,0 +1,31 @@
+<header>
+    <h1><a href="#">Today News</a></h1>
+</header>
+<nav id="navbar">
+  <ul class="menu-list">
+    <li class="logo"><a href="#">Today News</a></li>
+    <!-- <li><a href="#">Home</a></li> -->
+    <!-- <li><a href="#">About</a></li> -->
+
+    <li><a href="#">News</a></li>
+    <div onclick="show()"style="display: flex; margin-right: 30px;">
+      <li><i class="fas fa-user-circle"></i>
+        <ul class="nav-dropdown">
+          <li><a href="#!">Account</a></li>
+          <li><a href="#!">Log out</a></li>
+        </ul>
+      </li>
+    </div>
+  </ul>
+</nav>
+<script type="text/javascript">
+  function show() {
+  let x = document.querySelector('.nav-dropdown');
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+

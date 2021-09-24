@@ -12,5 +12,17 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+import { scrollnav } from '../scripts/navbar';
+
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your functions here, e.g:
+  // initSelect2();
+  scrollnav();
+  // hamburger();
+
+});
+
 require("trix")
 require("@rails/actiontext")
+require('jquery')
