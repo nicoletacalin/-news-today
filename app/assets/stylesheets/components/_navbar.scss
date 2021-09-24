@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+
+}
+body {
+  background: #f2f4f6;
+  min-height: 100vh;
+}
+header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff5252;
+  height: 25vh;
+}
+header > h1 > a {
+  color: #fff;
+  font-size: 80px;
+  text-shadow: 3px 5px 0 rgba(0, 0, 0, 0.2);
+  text-decoration:none;
+}
+nav#navbar {
+  background: #3f3d56;
+  // background: #ff5252;
+  top: 0;
+  position: relative;
+  width: 100%;
+  transition: all 0.5s linear;
+  z-index: 1;
+}
+ul.menu-list {
+  display: flex;
+  list-style: none;
+}
+ul.menu-list li {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px 0;
+}
+ul.menu-list li.logo {
+  max-width: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.5s linear;
+}
+.logo > a > img {
+  max-width: 80px;
+}
+ul.menu-list li.logo > a {
+  color:#ff5252;
+}
+
+ul.menu-list li > a {
+  text-decoration: unset;
+  display: flex;
+  color: #fff;
+  transition: 0.2s linar;
+  text-transform: uppercase;
+}
+body.fixed-nav nav#navbar {
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+}
+body.fixed-nav li.logo {
+  max-width: 300px;
+}
+
+
+
+i.fas:hover {
+    color: #ff5252;
+    background-color: #f2f5f7;
+    transition: all ease-in-out 200ms;
+}
+
+i.fas {
+    color: white;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+      border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 6px 0px;
+    position: absolute;
+    min-width: 70px;
+    right: 50px;
+    top: 46px;
+    margin-top: 0px;
+    background: rgb(254, 254, 254);
+    color: rgb(12, 12, 12);
+    padding: 12px 0px;
+  // z-index: 1;
+  // background-color: red;
+  // box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-dropdown > li > a {
+    font-size: 12px !important;
+    line-height: 2;
+    color: rgb(77, 77, 77) !important;
+}
+
+@media (max-width: 767.98px) {
+    header > h1 > a {
+      font-size: 50px;
+    }
+  };
+
+
+
+
+
