@@ -17,22 +17,26 @@ const nav = document.querySelector("#navbar");
 }
 
 
-// const hamburger = () => {
-//     const hamburger = document.querySelector(".hamburger");
-//     const navLinks = document.querySelector(".menu-list");
-//     const links = document.querySelectorAll(".menu-list li");
-
-//     hamburger.addEventListener('click', ()=>{
-//        //Animate Links
-//         navLinks.classList.toggle("open");
-//         links.forEach(link => {
-//             link.classList.toggle("fade");
-//         });
-
-//         //Hamburger Animation
-//         hamburger.classList.toggle("toggle");
-//     });
-// }
+const login = () => {
+  let navbutton = document.querySelector('.nav-button')
+  let dropdown = document.querySelector('.nav-dropdown');
 
 
-export { scrollnav };
+  navbutton.addEventListener('click', () => {
+    if (dropdown.style.display === "none") {
+      dropdown.style.display = "block";
+    } else {
+      dropdown.style.display = "none";
+    }
+  })
+
+  // window.addEventListener('mouseup', e => {
+  //   if (e.target != dropdown && e.target.parentNode != dropdown) {
+  //     dropdown.style.display = 'none';
+  //   }
+  // })
+
+}
+
+
+export { scrollnav, login };
