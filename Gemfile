@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise'
 gem 'friendly_id', '~> 5.4.0'
+gem 'will_paginate'
+gem 'cancancan', '~> 3.3.0'
 
 
 # Use Active Storage variant
