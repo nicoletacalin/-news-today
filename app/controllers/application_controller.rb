@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   helper_method :is_admin!
 
+  protected
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "You are not authorized to access this page."
+    redirect_to root_path
+  end
+
   def configure_permitted_parameters
     added_attrs = %i[username email password password_confirmation remember_me avatar]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
