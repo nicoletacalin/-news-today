@@ -5,6 +5,8 @@ class Post < ApplicationRecord
   # Action Text from Rails 6
   has_rich_text :body
 
+  attr_accessor :country
+
   validates :title, length: { minimum: 5 }
   validates :body,  length: { minimum: 25 }
 

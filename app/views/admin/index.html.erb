@@ -1,0 +1,7 @@
+<% if current_user.admin %>
+  <div class="admincontent">
+    <h3><%= link_to "Add Post", new_post_path%></h3>
+    <h3><%= link_to "All Posts", admin_posts_path %></h3>
+  </div>
+  <div class="js-items"></div>
+<% end %>

@@ -12,7 +12,21 @@
   min-height: 100vh;
   padding-top: 30px;
   padding-bottom: 30px;
+
 }
+.noarticle {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
 
 /* start */
 .news {
@@ -74,6 +88,37 @@
   right: 0;
   top: 0;
   bottom: 0;
-  position: absolute;
+  // position: absolute;
   z-index: 1;
+  color: #ff5252;
+}
+
+.titlepost {
+  margin-top: 10px;
+  padding-bottom: 12px;
+}
+
+.author {
+  padding-bottom: 12px;
+  font-weight: 300;
+  color: #939393;
+}
+
+.containerpost p {
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+.containerpost {
+  max-width: 770px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.main-article {
+  font-family: 'Georgia';
+  margin: 30px 0;
+  padding: 10px 22px;
+  border: 1px solid #EDEDED;
+  border-radius: 3px;
 }
