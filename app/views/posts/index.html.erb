@@ -1,0 +1,28 @@
+<div class='content'>
+  <div class="pagination">
+    <span><a href=""><%= will_paginate(@posts) %></a></span>
+  </div>
+  <% if @posts.any? %>
+    <% @posts.each do |post| %>
+    <figure class="news">
+      <!-- <img src="https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Blog Post Image Card" /> -->
+      <%= image_tag post.thumbnail %>
+      <!-- <img src="<%= url_for post.optimized_image(post.thumbnail, 750, 1260) %>" alt="Blog Post Image Card"> -->
+      <figcaption>
+        <!-- <h3>I was part of something special.</h3> -->
+        <h3><%=link_to post.title, post %></h3>
+        <!-- <p>This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. You know what? It is beets. I've crashed into a beet truck. Do you have any idea how long it takes those cups to decompose. </p> -->
+        <p><%= post.body.to_plain_text.truncate_words(46) %></p>
+        <footer>
+          <div class="date"><%= post.created_at.strftime("%B %e, %Y") %></div>
+        </footer>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+    <% end %>
+  <% else %>
+  <div class="noarticle">
+    <p>No articles made yet.</p>
+  </div>
+  <% end %>
+</div>
