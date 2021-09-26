@@ -30,6 +30,8 @@ gem 'faker'
 gem 'countries'
 gem 'simple_form'
 gem 'country_select'
+gem 'image_processing', '~> 1.2'
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 # Use Active Storage variant
