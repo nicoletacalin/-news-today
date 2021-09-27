@@ -30,6 +30,9 @@ gem 'faker'
 gem 'countries'
 gem 'simple_form'
 gem 'country_select'
+gem 'image_processing', '~> 1.2'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
 
 
 # Use Active Storage variant
