@@ -12,7 +12,7 @@
         <!-- <h3>I was part of something special.</h3> -->
         <h3><%=link_to post.title, post %></h3>
         <!-- <p>This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. You know what? It is beets. I've crashed into a beet truck. Do you have any idea how long it takes those cups to decompose. </p> -->
-        <p><%= post.body.to_plain_text.truncate_words(46) %></p>
+        <p><%= post.body.to_plain_text.truncate_words(40) %></p>
         <footer>
           <div class="date"><%= post.created_at.strftime("%B %e, %Y") %></div>
         </footer>
